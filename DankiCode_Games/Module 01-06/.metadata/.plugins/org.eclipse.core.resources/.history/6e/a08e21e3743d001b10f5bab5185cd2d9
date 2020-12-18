@@ -1,0 +1,7 @@
+package oo;
+
+public class Enemy {
+	public void enemyStart() {
+		System.out.println("Enemy Started");
+	}
+}

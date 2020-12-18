@@ -1,0 +1,10 @@
+package exerciseOO;
+
+public class Game {
+	public void startGame() {
+		
+	}
+	public static void Main(String[] args) {
+		
+	}
+}

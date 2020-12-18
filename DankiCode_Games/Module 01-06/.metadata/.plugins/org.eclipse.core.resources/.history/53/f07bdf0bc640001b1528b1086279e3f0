@@ -1,0 +1,23 @@
+package oo;
+
+public class Main{
+	private String name = "Fahme";
+	private int[] num;
+	public static final int MAX_LIFE = 100;
+	
+	public Main() {
+		num = new int[100];
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public static void main(String[] args) {
+//		Player plyr = new Player();
+//		Player2 plyr2 = new Player2();
+//		plyr.spawn();
+//		plyr2.spawn2();
+		Main m = new Main();
+		System.out.println(Main.MAX_LIFE);	
+	}
+}

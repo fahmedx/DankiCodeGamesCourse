@@ -1,0 +1,24 @@
+package Reading_Program;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] Args) {
+		Scanner in = new Scanner(System.in);
+		String name, age, weight, city, state, country;
+		System.out.println("Please, type your name:");
+		name = in.nextLine();
+		System.out.println("Please, type your age:");
+		age = in.nextLine();
+		System.out.println("Please, type your weight:");
+		weight = in.nextLine();
+		System.out.println("Please, type your city:");
+		city = in.nextLine();
+		System.out.println("Please, type your state:");
+		state = in.nextLine();
+		System.out.println("Please, type your country:");
+		country = in.nextLine();
+		//Result
+		System.out.println("Test Results:");
+	}
+}

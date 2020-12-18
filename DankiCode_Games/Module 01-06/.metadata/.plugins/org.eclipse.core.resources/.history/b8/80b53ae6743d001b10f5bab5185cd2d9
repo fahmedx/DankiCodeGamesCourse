@@ -1,0 +1,7 @@
+package oo;
+
+public class AbstractClass {
+	public void startGame() {
+		System.out.println("Starting Game");
+	}
+}

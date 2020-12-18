@@ -1,0 +1,35 @@
+package oo;
+
+public class Main implements MyInterface{
+	public static void main(String[] args) {
+		/*
+		System.out.println("Game Start!");
+		Player plyr = new Player();
+		Player plyr2 = new Player();
+		Enemy enmy = new Enemy();
+		plyr.playerStart();
+		enmy.enemyStart();
+		plyr2.playerStart();
+		*/
+		//new Main().instanceMain2();
+		new AbstractClass();
+	}
+	
+	public void startGame() {
+		
+	}
+	
+	public void callAbstractMethod() {
+		this.startGame();
+	}
+	
+	public void instanceMain2() {
+		new Main2().print1();
+	}
+	
+	private class Main2{
+		public void print1() {
+			System.out.println("Calling the method");
+		}
+	}
+}

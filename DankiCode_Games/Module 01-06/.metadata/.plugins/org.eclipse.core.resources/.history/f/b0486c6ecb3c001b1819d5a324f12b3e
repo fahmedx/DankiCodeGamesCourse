@@ -1,0 +1,22 @@
+
+public class Main {
+	public static void main(String[] args) {
+		/*int age = 22;
+		System.out.println("My age is:" + age);
+		age++;
+		System.out.println("My age is:" + age);
+		age++;
+		System.out.println("My age is:" + age);
+		age++;
+		*/
+		//Tipos de Variaveis em java
+		int num = 24;
+		String frase = "U ZAP ZAP ZAP ZAP";
+		boolean var = true;
+		char var2 = 'Z';
+		System.out.println(num);
+		System.out.println(frase);
+		System.out.println(var);
+		System.out.println(var2);
+	}
+}

@@ -1,0 +1,6 @@
+package exerciseOO;
+
+public class Enemy {
+	private int life = 5;
+
+}

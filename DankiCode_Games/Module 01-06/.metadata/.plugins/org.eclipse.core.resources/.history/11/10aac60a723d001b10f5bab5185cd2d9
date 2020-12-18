@@ -1,0 +1,26 @@
+package oo;
+
+public class Main {
+	public static void main(String[] args) {
+		/*
+		System.out.println("Game Start!");
+		Player plyr = new Player();
+		Player plyr2 = new Player();
+		Enemy enmy = new Enemy();
+		plyr.playerStart();
+		enmy.enemyStart();
+		plyr2.playerStart();
+		*/
+		
+	}
+	
+	public void stanceMain2() {
+		new Main2().print1();
+	}
+	
+	class Main2{
+		public void print1() {
+			System.out.println("Chamando meu método");
+		}
+	}
+}

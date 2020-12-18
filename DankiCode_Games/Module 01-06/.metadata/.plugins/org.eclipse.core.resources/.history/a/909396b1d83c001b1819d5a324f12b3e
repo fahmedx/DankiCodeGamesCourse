@@ -1,0 +1,11 @@
+package Reading_Program;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] Args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please, type your name:");
+		String nome = in.nextLine();
+	}
+}

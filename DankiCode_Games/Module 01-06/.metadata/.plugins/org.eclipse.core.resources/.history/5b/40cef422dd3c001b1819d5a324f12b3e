@@ -1,0 +1,66 @@
+package Reading_Program;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] Args) {
+		/*
+		Scanner in = new Scanner(System.in);
+		String name, age, weight, city, state, country;
+		System.out.println("Please, type your name:");
+		name = in.nextLine();
+		System.out.println("Please, type your age:");
+		age = in.nextLine();
+		System.out.println("Please, type your weight:");
+		weight = in.nextLine();
+		System.out.println("Please, type your city:");
+		city = in.nextLine();
+		System.out.println("Please, type your state:");
+		state = in.nextLine();
+		System.out.println("Please, type your country:");
+		country = in.nextLine();
+		//Result
+		System.out.println("--------------------------");
+		System.out.println("Test Results:");
+		System.out.println("Name: " + name);
+		System.out.println("Age: " + age);
+		System.out.println("Weight: " + weight);
+		System.out.println("Location: " + city + "-" + state + "/" + country);
+		*/
+		Scanner in = new Scanner(System.in);
+		Random rand = new Random();
+		String name, command, continuee;
+		int i = 1;
+		rand.nextInt();
+		System.out.println("Hello, please type your name to begin:");
+		name = in.nextLine();
+		System.out.println("Wellcome "+name);
+		while (i == 1) {
+			System.out.println("Do you wanna go to witch direction? (w,a,s,d)");
+			command	= in.nextLine();
+			if(command.equals("w")) {
+				System.out.println("You go ahead");
+				System.out.println("A enemy aproach, what you gonna do? (a = attack, r=run)");
+				if (command.equals("a")) {
+					if (rand.nextInt(20)>8) {
+						i++;
+						System.out.println("Congrats!! You cleared the game");
+					}else {
+						System.out.println("The enemy hitted you, you died...");
+						System.out.println("Try Again?");
+						continue = in.nextLine();
+					}
+				}
+			}else if(command.equals("a")) {
+			
+			}else if (command.equals("s")) {
+			
+			}else if(command.equals("d")) {
+			
+			}else {
+				System.out.println("Invalid Command, Please Try again...");
+			}
+		}
+	}
+}

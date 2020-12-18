@@ -1,0 +1,17 @@
+package oo;
+
+public class Main{
+	private String name = "Fahme";
+	private int[] num;
+	
+	public Main() {
+		num = new int[100];
+	}
+	public static void main(String[] args) {
+//		Player plyr = new Player();
+//		Player2 plyr2 = new Player2();
+//		plyr.spawn();
+//		plyr2.spawn2();
+		
+	}
+}

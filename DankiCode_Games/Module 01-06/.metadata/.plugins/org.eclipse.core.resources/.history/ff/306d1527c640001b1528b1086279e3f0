@@ -1,0 +1,8 @@
+package oo;
+
+public class Player {
+	public int startingLife, time;
+	public void spawn() {
+		System.out.println("Player Spawned");
+	}
+}

@@ -1,0 +1,9 @@
+package Reading_Program;
+import java.util.Scanner;
+
+public class Main {
+	public static void Main(String[] Args) {
+		Scanner in = new Scanner(System.in);
+		String nome = in.nextLine();
+	}
+}

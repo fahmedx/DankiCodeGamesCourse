@@ -1,0 +1,10 @@
+package oo;
+
+public class Main {
+	public static void main(String[] args) {
+		Player plyr = new Player();
+		Enemy enmy = new Enemy();
+		plyr.startPlayer();
+		enmy.enemyStart();
+	}
+}
