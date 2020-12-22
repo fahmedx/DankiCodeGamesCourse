@@ -3,7 +3,9 @@ package graphics;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 
@@ -14,20 +16,33 @@ public class Game extends Canvas implements Runnable{
 	public static JFrame frame;
 	private Thread thread;
 	private boolean isRunning = true;
-	private final int  WIDTH = 160;
-	private final int  HEIGHT = 120;
-	private final int SCALE = 2;
+	private final int  WIDTH = 240;
+	private final int  HEIGHT = 160;
+	private final int SCALE = 3;
+	private int x = 0;
+	private int frames = 0;
+	private int maxframes = 8;
+	private int curAnim = 0;
+	private int maxAnim = 3;
 	
 	private BufferedImage img;
 	
+	private Spritesheet sheet;
+	private BufferedImage[] player;
+	
 	public Game() {
+		sheet = new Spritesheet("/spritesheet.png");
+		player = new BufferedImage[3];
+		player[0] = sheet.getSprite(0, 0, 20, 20);
+		player[1] = sheet.getSprite(20, 0, 20, 20);
+		player[2] = sheet.getSprite(40, 0, 20, 20);
 		this.setPreferredSize(new Dimension(WIDTH*SCALE,HEIGHT*SCALE));
 		initFrame();
 		img = new BufferedImage(160,120,BufferedImage.TYPE_INT_RGB);
 	}
 	
 	public void initFrame() {
-		frame = new JFrame("My Game");
+		frame = new JFrame("Pink Pants");
 		frame.add(this);
 		frame.setResizable(false);
 		frame.pack();
@@ -59,6 +74,18 @@ public class Game extends Canvas implements Runnable{
 	
 	public void tick() {
 //		System.out.println("Tick");
+		if (x == 240) {
+			x = 0;
+		}
+		x++;
+		frames++;
+		if (frames > maxframes) {
+			frames = 0;
+			curAnim++;
+			if (curAnim>=maxAnim) {
+				curAnim = 0;
+			}
+		}
 	}
 	
 	public void render() {
@@ -70,10 +97,19 @@ public class Game extends Canvas implements Runnable{
 		Graphics g = img.getGraphics();
 		g.setColor(new Color(0,0,0));
 		g.fillRect(0, 0, WIDTH, HEIGHT);
+//		g.setColor(Color.RED);
+//		g.fillOval(20, 20, 15, 15);
 		
-		g.setColor(Color.RED);
-		g.fillOval(20, 20, 15, 15);
+		g.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
+		g.setColor(Color.white);
+		g.drawString("Pink Pants", 41, 49);
+		g.setColor(Color.pink);
+		g.drawString("Pink Pants", 40, 50);
 		
+		Graphics2D g2 = (Graphics2D) g;
+		g2.rotate(Math.toRadians(0),90+10,90+10);
+		g2.drawImage(player[curAnim], x, 70, null);
+		g.dispose();
 		g = bs.getDrawGraphics();
 		g.drawImage(img, 0, 0, WIDTH*SCALE, HEIGHT*SCALE, null);
 		bs.show();
